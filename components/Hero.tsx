@@ -1,6 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 import { Spotlight } from "./ui/SpotLight";
+import { GridBackGround } from "./ui/GridBackground";
 
 const Hero = () => {
 
@@ -9,7 +10,7 @@ const Hero = () => {
             'pb-20 pt-36'
         ])}>
             <div>
-                <Spotlight fill="#D4AF37" className={clsx([
+                <Spotlight fill="#6D28D9" className={clsx([
                     "-top-40 -left-40",
                     "md:-left-32 md:-top-20",
                     'h-screen'
@@ -24,7 +25,15 @@ const Hero = () => {
                     "top-28 left-80",
                     'h-[80vh] w-[50vw]',
                 ])} />
+
+
             </div>
+
+
+
+            <GridBackGround />
+
+
         </div>
     );
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Raleway } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "./provider";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -74,7 +75,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${raleway.variable} ${inter.variable} font-body`}>
-        {children}
+       <ThemeProvider attribute={'class'} defaultTheme="dark" enableSystem disableTransitionOnChange>
+             {children}
+       </ThemeProvider>
       </body>
     </html>
   );
