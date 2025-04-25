@@ -5,6 +5,13 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Welcome } from "@/components/ui/Welcome";
 import { RainyEffect } from "@/components/animations/RainyEffect";
+import { Navbar } from "@/components/ui/Navbar";
+import { navItems } from "@/data/constants";
+import Grid from "@/components/Grid";
+import { About } from "@/components/About";
+import { Services } from "@/components/Services";
+import { Projects } from "@/components/Projects";
+import { Experiences } from "@/components/Experiences";
 
 export default function Home() {
   const [showWelcome, setShowWelcome] = useState(true);
@@ -15,9 +22,9 @@ export default function Home() {
       <RainyEffect isReduced={!showWelcome} particleCount={50} staticLineCount={10} />
       
       <AnimatePresence mode="wait">
-        {showWelcome && <Welcome onComplete={() => setShowWelcome(false)} />}
+        {showWelcome && <Welcome onComplete={() => setShowWelcome(false)} />} 
 
-        {!showWelcome && (
+         {!showWelcome && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -33,11 +40,17 @@ export default function Home() {
             >
               {/* Content with higher z-index to ensure it's above the rain */}
               <div className='max-w-7xl w-full relative z-10'>
+                <Navbar navItems={navItems}/>
                 <Hero />
+                <About />
+                <Services />
+                <Grid />
+                <Projects />
+                <Experiences />
               </div>
             </main>
           </motion.div>
-        )}
+         )} 
       </AnimatePresence>
     </>
   );

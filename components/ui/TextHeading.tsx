@@ -52,7 +52,7 @@ export const TextHeading = ({
 
   return (
     <div className={cn("font-bold", className)}>
-      <div className="mt-4">
+      <div className="my-4">
         <div className="bg-gradient-to-r from-blue-100 to-purple text-transparent bg-clip-text leading-snug tracking-wide">
           {renderWords()}
         </div>

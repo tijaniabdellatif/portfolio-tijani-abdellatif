@@ -31,16 +31,17 @@ const config = {
         body: ["var(--font-body)", "sans-serif"],
       },
       colors: {
+		
         black: {
-          DEFAULT: "#000",
-          100: "#000319",
-          200: "rgba(17, 25, 40, 0.75)",
-          300: "rgba(255, 255, 255, 0.125)",
+			DEFAULT: "#000",
+			100: "#000319",
+			200: "rgba(17, 25, 40, 0.75)",
+			300: "rgba(255, 255, 255, 0.125)",
         },
         white: {
+          "100": "#BEC1DD",
+          "200": "#C1C2D3",
           DEFAULT: "#FFF",
-          100: "#BEC1DD",
-          200: "#C1C2D3",
         },
         blue: {
           "100": "#E4ECFF",
@@ -79,6 +80,23 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        chart: {
+          "1": "hsl(var(--chart-1))",
+          "2": "hsl(var(--chart-2))",
+          "3": "hsl(var(--chart-3))",
+          "4": "hsl(var(--chart-4))",
+          "5": "hsl(var(--chart-5))",
+        },
+        sidebar: {
+          DEFAULT: "hsl(var(--sidebar-background))",
+          foreground: "hsl(var(--sidebar-foreground))",
+          primary: "hsl(var(--sidebar-primary))",
+          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
+          accent: "hsl(var(--sidebar-accent))",
+          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
+          border: "hsl(var(--sidebar-border))",
+          ring: "hsl(var(--sidebar-ring))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -86,13 +104,25 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        borderFlow: {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
         "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
         },
         "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
+          },
         },
         spotlight: {
           "0%": {
@@ -152,6 +182,7 @@ const config = {
         },
       },
       animation: {
+        "border-flow": "borderFlow 3s ease infinite",
         "spin-slow": "spin 3s linear infinite",
         "spin-slower": "spin 5s linear infinite",
         "pulse-subtle": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
@@ -164,6 +195,7 @@ const config = {
         third: "moveInCircle 40s linear infinite",
         fourth: "moveHorizontal 40s ease infinite",
         fifth: "moveInCircle 20s ease infinite",
+        
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },

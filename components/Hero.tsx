@@ -7,7 +7,7 @@ const Hero = () => {
 
     return (
         <div className={clsx([
-            'pb-20 pt-36'
+            'pt-36'
         ])}>
             <div>
                 <Spotlight fill="#6D28D9" className={clsx([
