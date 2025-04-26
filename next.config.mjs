@@ -3,9 +3,12 @@ import pkg from 'next';
 const nextConfig = {
   /* config options here */
   
-  output: 'export',
+  
   typescript:{
     ignoreBuildErrors: true,
+  },
+  experimental: {
+    appDir: true,
   }
 };
 
