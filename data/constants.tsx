@@ -125,7 +125,7 @@ export const PROJECTS = [
         title: "Multilist",
         des: 'Real Estate Application, Connecting Multiple Users. Enable users to connect and share their real estate needs.',
         img: "/multi.png",
-        iconList: ["/laravel.png", "/vue.png", "/ts.svg", "/gcp.png", "/postgres.png"],
+        iconList: ["/lara.svg", "/vue.png", "/ts.svg", "/gcp.png", "/postgres.png"],
         link: "https://multilist.immo/",
     },
     {
@@ -174,7 +174,7 @@ export const PROJECTS = [
         title: "Preparing Web development Bootcamp",
         des: 'Managing the bootcamp, and preparing the content for the students to learn the web development',
         img: "/content.png",
-        iconList: ["/react.png", "/laravel.png", "/php.png", "/dock.svg", "/node.png"],
+        iconList: ["/react.png", "/lara.svg", "/php.png", "/dock.svg", "/node.png"],
         link: "https://osui.notion.site/bc05aee7f6e54d52b174beadcf2c043d?v=2d1e1e4becea41bc9fc6a9b67acc6378&pvs=4",
     }
 ];
