@@ -1,7 +1,7 @@
 'use client';
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "@/utils/animation";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Card, CardContent} from "@/components/ui/Card";
 import { CERTIFICATIONS } from "@/data/constants";
 import { ExternalLink } from "lucide-react";
 import {

@@ -1,6 +1,5 @@
 import React from 'react';
 import dayjs from 'dayjs';
-import MagicButton from './ui/MagicButton';
 import { FaLocationArrow } from 'react-icons/fa';
 import { socialMedia } from '@/data/constants';
 import { LandingButton } from './ui/LandingButton';

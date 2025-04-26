@@ -2,13 +2,12 @@ import pkg from 'next';
 
 const nextConfig = {
   /* config options here */
-  
-  
-  typescript:{
+  output: 'export',
+  typescript: {
     ignoreBuildErrors: true,
   },
-  experimental: {
-    appDir: true,
+  images: {
+    unoptimized: true, // Required for static export
   }
 };
 
