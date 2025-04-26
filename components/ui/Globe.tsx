@@ -5,13 +5,23 @@ import ThreeGlobe from "three-globe";
 import { useThree, Object3DNode, Canvas, extend } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import countries from "@/data/globe.json";
-declare module "@react-three/fiber" {
-  interface ThreeElements {
-    threeGlobe: Object3DNode<ThreeGlobe, typeof ThreeGlobe>;
-  }
+
+// Prevent SSR issues with ThreeGlobe
+let loadedThreeGlobe = null;
+if (typeof window !== 'undefined') {
+  loadedThreeGlobe = ThreeGlobe;
 }
 
-extend({ ThreeGlobe });
+// Define extension only on client side
+if (typeof window !== 'undefined') {
+  declare module "@react-three/fiber" {
+    interface ThreeElements {
+      threeGlobe: Object3DNode<ThreeGlobe, typeof ThreeGlobe>;
+    }
+  }
+  
+  extend({ ThreeGlobe: loadedThreeGlobe });
+}
 
 const RING_PROPAGATION_SPEED = 3;
 const aspect = 1.2;
@@ -58,7 +68,35 @@ interface WorldProps {
   data: Position[];
 }
 
+// Store rings data outside of component to prevent SSR issues
 let numbersOfRings = [0];
+
+// Function to generate random numbers for rings
+function genRandomNumbers(min: number, max: number, count: number) {
+  const arr = [];
+  while (arr.length < count) {
+    const r = Math.floor(Math.random() * (max - min)) + min;
+    if (arr.indexOf(r) === -1) arr.push(r);
+  }
+  return arr;
+}
+
+// Convert hex to RGB function
+function hexToRgb(hex: string) {
+  var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+  hex = hex.replace(shorthandRegex, function (m, r, g, b) {
+    return r + r + g + g + b + b;
+  });
+
+  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return result
+    ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16),
+      }
+    : null;
+}
 
 export function Globe({ globeConfig, data }: WorldProps) {
   const [globeData, setGlobeData] = useState<
@@ -135,7 +173,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
       });
     }
 
-    // remove duplicates for same lat and lng
+    // Remove duplicates for same lat and lng
     const filteredPoints = points.filter(
       (v, i, a) =>
         a.findIndex((v2) =>
@@ -223,6 +261,9 @@ export function Globe({ globeConfig, data }: WorldProps) {
     };
   }, [globeRef.current, globeData]);
 
+  // Only render if ThreeGlobe is available (client-side)
+  if (!loadedThreeGlobe) return null;
+
   return (
     <>
       <threeGlobe ref={globeRef} />
@@ -243,9 +284,20 @@ export function WebGLRendererConfig() {
 }
 
 export function World(props: WorldProps) {
+  // Add client-side only check
+  const [isMounted, setIsMounted] = useState(false);
+  
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+  
+  // Return null during SSR
+  if (!isMounted) return null;
+  
   const { globeConfig } = props;
   const scene = new Scene();
   scene.fog = new Fog(0xffffff, 400, 2000);
+  
   return (
     <Canvas scene={scene} camera={new PerspectiveCamera(50, aspect, 180, 1800)}>
       <WebGLRendererConfig />
@@ -276,30 +328,4 @@ export function World(props: WorldProps) {
       />
     </Canvas>
   );
-}
-
-export function hexToRgb(hex: string) {
-  var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
-  hex = hex.replace(shorthandRegex, function (m, r, g, b) {
-    return r + r + g + g + b + b;
-  });
-
-  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-  return result
-    ? {
-        r: parseInt(result[1], 16),
-        g: parseInt(result[2], 16),
-        b: parseInt(result[3], 16),
-      }
-    : null;
-}
-
-export function genRandomNumbers(min: number, max: number, count: number) {
-  const arr = [];
-  while (arr.length < count) {
-    const r = Math.floor(Math.random() * (max - min)) + min;
-    if (arr.indexOf(r) === -1) arr.push(r);
-  }
-
-  return arr;
 }

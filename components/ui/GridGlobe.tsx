@@ -4,7 +4,13 @@ import dynamic from "next/dynamic";
 
 const World = dynamic(() => import("./Globe").then((m) => m.World), {
   ssr: false,
+  loading: () => (
+    <div className="w-full h-72 md:h-full flex items-center justify-center">
+      <div className="animate-pulse text-white-100">Loading globe...</div>
+    </div>
+  )
 });
+
 
 const GridGlobe = () => {
   const globeConfig = {

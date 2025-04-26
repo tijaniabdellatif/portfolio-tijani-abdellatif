@@ -85,6 +85,8 @@ export const SERVICES = [
                     "NodeJS Express",
                     "MYSQL",
                     "PHP",
+                    "ELK",
+                    "Redis",
                     "PostgreSQL",
                     "AWS,GCP",
                 ],
@@ -104,7 +106,7 @@ export const SERVICES = [
             stats: {
                 title: "Mentor Stats :",
                 items: [
-                    "6+ years experience",
+                    "5+ years experience",
                     "30+ short courses",
                     "20+ bootcamps",
                     "250+ students",
