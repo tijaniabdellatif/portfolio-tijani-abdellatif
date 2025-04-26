@@ -12,6 +12,7 @@ import { About } from "@/components/About";
 import { Services } from "@/components/Services";
 import { Projects } from "@/components/Projects";
 import { Experiences } from "@/components/Experiences";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   const [showWelcome, setShowWelcome] = useState(true);
@@ -47,8 +48,10 @@ export default function Home() {
                 <Grid />
                 <Projects />
                 <Experiences />
+                <Footer />
               </div>
             </main>
+           
           </motion.div>
          )} 
       </AnimatePresence>

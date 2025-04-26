@@ -11,6 +11,19 @@ export const navItems = [
 
 ];
 
+export const socialMedia = [
+    {
+      id: 1,
+      img: "/git.svg",
+      link:'https://github.com/tijaniabdellatif'
+    },
+    {
+      id: 2,
+      img: "/link.svg",
+      link:'https://www.linkedin.com/in/abdellatif-tijani/'
+    },
+  ];
+
 export const SERVICES = [
     {
         title: "Project Manager",
@@ -108,96 +121,62 @@ export const PROJECTS = [
         id:1,
         title:"Multilist",
         des:'Real Estate Application, Connecting Multiple Users. Enable users to connect and share their real estate needs.',
-        img:"/p1.svg",
-        iconList : ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+        img:"/multi.png",
+        iconList : ["/laravel.png", "/vue.png", "/ts.svg", "/gcp.png", "/postgres.png"],
         link:"https://multilist.immo/",
     },
     {
         id:2,
         title:"Ass BasketBall",
         des:'WebSite to Highlight the ASS basketBall Team / Morocco.',
-        img:"/p2.svg",
-        iconList : ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+        img:"/ass.png",
+        iconList : ["/wordpress.png", "/php.png", "/javascript.png", "/mysql.png", "/javascript.png"],
         link:"https://assbasketball.ma/",
     },
 
     {
         id:3,
-        title:"Ass BasketBall",
-        des:'WebSite to Highlight the ASS basketBall Team / Morocco.',
-        img:"/p2.svg",
-        iconList : ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-        link:"https://assbasketball.ma/",
+        title:"NPM Package",
+        des:'A shared package capable of handling logs, typeorm, Routing and many more features',
+        img:"/package.png",
+        iconList : ["/express.png", "/elastic.png", "/dock.svg", "/node.png", "/ts.svg"],
+        link:"https://github.com/tijaniabdellatif/commons",
     },
     {
         id:4,
-        title:"Ass BasketBall",
-        des:'WebSite to Highlight the ASS basketBall Team / Morocco.',
-        img:"/p2.svg",
-        iconList : ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-        link:"https://assbasketball.ma/",
+        title:"Youcode",
+        des:'WebSite to highlight the digital school Youcode',
+        img:"/youcode.png",
+        iconList : ["/nuxt.png", "/php.png", "/postgres.png", "/stream.svg", "/c.svg"],
+        link:"https://www.youcode.ma/",
     },
     {
         id:5,
-        title:"Ass BasketBall",
-        des:'WebSite to Highlight the ASS basketBall Team / Morocco.',
-        img:"/p2.svg",
-        iconList : ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-        link:"https://assbasketball.ma/",
+        title:"LMS Microservices",
+        des:'The platform is a learning management system (LMS) that allows users to create, manage, and deliver online courses.',
+        img:"/lms.png",
+        iconList : ["/next.svg", "/dock.svg", "/ts.svg", "/redis.png", "/mongo.png"],
+        link:"https://www.youcode.ma/",
+    },
+    {
+        id:6,
+        title:"The fifth Element Academy",
+        des:'WebSite to highlight the digital school The fifth Element Academy, and 3 more platforms to manage the students  instructors & administrators',
+        img:"/fifth.svg",
+        iconList : ["/angular.png", "/nest.png", "/ts.svg", "/aws.png", "/express.png"],
+        link:"https://www.youcode.ma/",
+    },
+    {
+        id:6,
+        title:"Preparing Web development Bootcamp",
+        des:'Managing the bootcamp, and preparing the content for the students to learn the web development',
+        img:"/content.png",
+        iconList : ["/react.png", "/laravel.png", "/php.png", "/dock.svg", "/node.png"],
+        link:"https://www.youcode.ma/",
     }
 ];
 
-export const PROJECTSs = {
-    client: [
-        {
-            title: "Multilist",
-            description: "Real Estate Application, Connecting Multiple Users.",
-            logo: "SiBootstrap",
-            website: "https://multilist.immo/",
-            tags: ["Real Estate", "Laravel", "VueJS", "GCP"],
-        },
-        {
-            title: "Ass BasketBall",
-            description: "WebSite to Highlight the ASS basketBall Team / Morocco",
-            logo: "SiOpenai",
-            website: "https://assbasketball.ma/",
-            tags: ["Wordpress", "PHP", "Community", "Sport"],
-        },
-        {
-            title: "MMTrack",
-            description: "Universal Tracking System",
-            logo: "SiGithub",
-            website: "https://mmtrack.ma/",
-            tags: ["Supply Chain", "Tracking Tools", "PHP"],
-        },
 
-        {
-            title: "La Cité School",
-            description:
-                "website to visualise and manage la cité school with its two levels, elementary and high school ",
-            logo: "SiGithub",
-            website: "https://www.ecolelacite.ma",
-            tags: ["Education", "PHP", "Laravel", "Javascript"],
-        },
-    ],
-    personal: [
-        {
-            title: "NPM Package",
-            description:
-                "Simple but powerful Package to handle microservices design patterns.",
-            logo: "SiTrello",
-            github: "https://github.com/tijaniabdellatif/commons",
-            tags: ["Typescript", "POO", "ElasticSearch"],
-        },
-        {
-            title: "HR CRM",
-            description: "Dynamic CRM and HR management.",
-            logo: "SiReact",
-            github: "https://github.com/tijaniabdellatif/crm-worksuite",
-            tags: ["Laravel", "Javascript"],
-        },
-    ],
-};
 
 export const EXPERIENCE = [
     {

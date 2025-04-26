@@ -24,7 +24,7 @@ export default function Heading({ text, subtext }: IHeading) {
                 </p>
 
                 <div className="flex flex-col gap-4 md:flex-row lg:flex-row md:gap-4 lg:gap-4">
-                    <a href="#projects">
+                    <a href="#contact">
                         <LandingButton text="Get In Touch"
                             position="left"
                             icon={<Contact className="h-4 w-4 text-white" />}
@@ -32,7 +32,7 @@ export default function Heading({ text, subtext }: IHeading) {
 
                     </a>
 
-                    <a href="#contact">
+                    <a href="#projects">
                         <LandingButton text="Show Projects"
                             position="left"
                             icon={<FolderGit2 className="h-4 w-4 text-white" />}
