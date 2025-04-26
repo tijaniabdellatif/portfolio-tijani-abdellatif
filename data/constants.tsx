@@ -131,7 +131,7 @@ export const PROJECTS = [
     {
         id: 2,
         title: "Ass BasketBall",
-        des: 'WebSite to Highlight the ASS basketBall Team / Morocco.',
+        des: 'WebSite to Highlight the ASS basketBall Team/Morocco.',
         img: "/ass.png",
         iconList: ["/wordpress.png", "/php.png", "/javascript.png", "/mysql.png", "/elementor.svg"],
         link: "https://assbasketball.ma/",

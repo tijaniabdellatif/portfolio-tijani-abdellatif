@@ -31,7 +31,7 @@ export function About() {
                     >
                         <p className="text-lg text-muted-foreground">
                             Passionate about creating impactful digital solutions and sharing
-                            knowledge with the developer community
+                            knowledge with the community
                         </p>
                     </motion.div>
 
