@@ -1,28 +1,29 @@
 
 export const navItems = [
 
-    
-    { name: "About", link: "#about", icon: "ℹ️" },
-    { name: "Services", link: "#services", icon: "📁" },
-    { name: "Work Ethic", link: "#ethic", icon: "📁" },
-    { name: "Projects", link: "#projects", icon: "📁" },
-    { name: "Experiences", link: "#experiences", icon: "📁" },
-    
+
+    { name: "About", link: "#about", icon: "ℹ️" },              // Info
+    { name: "Services", link: "#services", icon: "🛠️" },         // Tools/Services
+    { name: "Work Ethic", link: "#ethic", icon: "💼" },           // Professionalism/Work
+    { name: "Projects", link: "#projects", icon: "📂" },          // Folder/Projects
+    { name: "Experiences", link: "#experiences", icon: "🧠" },    // Knowledge/Experience
+    { name: "Contact", link: "#contact", icon: "📞" }             // Phone/Contact
+
 
 ];
 
 export const socialMedia = [
     {
-      id: 1,
-      img: "/git.svg",
-      link:'https://github.com/tijaniabdellatif'
+        id: 1,
+        img: "/git.svg",
+        link: 'https://github.com/tijaniabdellatif'
     },
     {
-      id: 2,
-      img: "/link.svg",
-      link:'https://www.linkedin.com/in/abdellatif-tijani/'
+        id: 2,
+        img: "/link.svg",
+        link: 'https://www.linkedin.com/in/abdellatif-tijani/'
     },
-  ];
+];
 
 export const SERVICES = [
     {
@@ -118,61 +119,61 @@ export const SERVICES = [
 export const PROJECTS = [
 
     {
-        id:1,
-        title:"Multilist",
-        des:'Real Estate Application, Connecting Multiple Users. Enable users to connect and share their real estate needs.',
-        img:"/multi.png",
-        iconList : ["/laravel.png", "/vue.png", "/ts.svg", "/gcp.png", "/postgres.png"],
-        link:"https://multilist.immo/",
+        id: 1,
+        title: "Multilist",
+        des: 'Real Estate Application, Connecting Multiple Users. Enable users to connect and share their real estate needs.',
+        img: "/multi.png",
+        iconList: ["/laravel.png", "/vue.png", "/ts.svg", "/gcp.png", "/postgres.png"],
+        link: "https://multilist.immo/",
     },
     {
-        id:2,
-        title:"Ass BasketBall",
-        des:'WebSite to Highlight the ASS basketBall Team / Morocco.',
-        img:"/ass.png",
-        iconList : ["/wordpress.png", "/php.png", "/javascript.png", "/mysql.png", "/javascript.png"],
-        link:"https://assbasketball.ma/",
+        id: 2,
+        title: "Ass BasketBall",
+        des: 'WebSite to Highlight the ASS basketBall Team / Morocco.',
+        img: "/ass.png",
+        iconList: ["/wordpress.png", "/php.png", "/javascript.png", "/mysql.png", "/elementor.svg"],
+        link: "https://assbasketball.ma/",
     },
 
     {
-        id:3,
-        title:"NPM Package",
-        des:'A shared package capable of handling logs, typeorm, Routing and many more features',
-        img:"/package.png",
-        iconList : ["/express.png", "/elastic.png", "/dock.svg", "/node.png", "/ts.svg"],
-        link:"https://github.com/tijaniabdellatif/commons",
+        id: 3,
+        title: "NPM Package",
+        des: 'A shared package capable of handling logs, typeorm, Routing and many more features',
+        img: "/package.png",
+        iconList: ["/express.png", "/elastic.png", "/dock.svg", "/node.png", "/ts.svg"],
+        link: "https://github.com/tijaniabdellatif/commons",
     },
     {
-        id:4,
-        title:"Youcode",
-        des:'WebSite to highlight the digital school Youcode',
-        img:"/youcode.png",
-        iconList : ["/nuxt.png", "/php.png", "/postgres.png", "/stream.svg", "/c.svg"],
-        link:"https://www.youcode.ma/",
+        id: 4,
+        title: "Youcode",
+        des: 'WebSite to highlight the digital school Youcode',
+        img: "/youcode.png",
+        iconList: ["/nuxt.png", "/php.png", "/postgres.png", "/node.png", "/javascript.png"],
+        link: "https://www.youcode.ma/",
     },
     {
-        id:5,
-        title:"LMS Microservices",
-        des:'The platform is a learning management system (LMS) that allows users to create, manage, and deliver online courses.',
-        img:"/lms.png",
-        iconList : ["/next.svg", "/dock.svg", "/ts.svg", "/redis.png", "/mongo.png"],
-        link:"https://www.youcode.ma/",
+        id: 5,
+        title: "LMS Microservices",
+        des: 'The platform is a learning management system (LMS) that allows users to create, manage, and deliver online courses.',
+        img: "/lms.png",
+        iconList: ["/next.svg", "/dock.svg", "/ts.svg", "/redis.png", "/mongo.png"],
+        link: "https://github.com/tijaniabdellatif/microservices-k8s-ecommerce/",
     },
     {
-        id:6,
-        title:"The fifth Element Academy",
-        des:'WebSite to highlight the digital school The fifth Element Academy, and 3 more platforms to manage the students  instructors & administrators',
-        img:"/fifth.svg",
-        iconList : ["/angular.png", "/nest.png", "/ts.svg", "/aws.png", "/express.png"],
-        link:"https://www.youcode.ma/",
+        id: 6,
+        title: "The fifth Element Academy",
+        des: 'WebSite to highlight the digital school The fifth Element Academy, and 3 more platforms to manage the students  instructors & administrators',
+        img: "/fifth.png",
+        iconList: ["/angular.png", "/nest.png", "/ts.svg", "/aws.png", "/express.png"],
+        link: "https://fifthelementacademy.com/",
     },
     {
-        id:6,
-        title:"Preparing Web development Bootcamp",
-        des:'Managing the bootcamp, and preparing the content for the students to learn the web development',
-        img:"/content.png",
-        iconList : ["/react.png", "/laravel.png", "/php.png", "/dock.svg", "/node.png"],
-        link:"https://www.youcode.ma/",
+        id: 6,
+        title: "Preparing Web development Bootcamp",
+        des: 'Managing the bootcamp, and preparing the content for the students to learn the web development',
+        img: "/content.png",
+        iconList: ["/react.png", "/laravel.png", "/php.png", "/dock.svg", "/node.png"],
+        link: "https://osui.notion.site/bc05aee7f6e54d52b174beadcf2c043d?v=2d1e1e4becea41bc9fc6a9b67acc6378&pvs=4",
     }
 ];
 
@@ -307,7 +308,7 @@ export const Griditems = [
         description: "",
         className: "lg:col-span-2 md:col-span-3 md:row-span-1",
         imgClassName: "",
-        titleClassName: "justify-start text-white/80" ,
+        titleClassName: "justify-start text-white/80",
         img: "/grid.svg",
         spareImg: "/b4.svg",
     },

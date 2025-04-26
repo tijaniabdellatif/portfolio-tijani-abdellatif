@@ -34,7 +34,7 @@ export default function Home() {
           >
             <main 
               className={clsx([
-                'relative overflow-hidden mx-auto sm:px-10 px-5',
+                'relative overflow-clip mx-auto sm:px-10 px-5',
                 'flex flex-col justify-center items-center',
                 "bg-black-100 min-h-screen" // Solid background for readability
               ])}
